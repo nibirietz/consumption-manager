@@ -1,19 +1,9 @@
-import repository
-from dtclasses import Purchase, Income
-from datetime import datetime
+from api import app
+import uvicorn
 
 
 def main():
-    global repo
-    repo = repository.Repository("test")
-    test_purchase()
-
-
-def test_purchase():
-    purchase = Purchase(name="meow", cost=10, date=datetime.now())
-    print(purchase)
-    repo.add_purchase(purchase)
-    repo.delete_purchase(purchase)
+    uvicorn.run("main:app", port=25565, log_level="info")
 
 
 if __name__ == "__main__":
