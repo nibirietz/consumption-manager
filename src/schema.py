@@ -6,6 +6,7 @@ class PurchaseSchemaBase(BaseModel):
     name: str
     cost: float
     date: datetime
+    category: str
 
 
 class PurchaseSchemaCreate(PurchaseSchemaBase):
