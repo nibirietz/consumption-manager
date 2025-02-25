@@ -1,2 +1,2 @@
 class Config:
-    standard_path = "tests"
+    standard_path = "test_data"
